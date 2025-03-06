@@ -1,0 +1,13 @@
+Q :- What is Fragment ? 
+A :- Allows grouping of multiple elements without extra DOM Nodes
+
+Syntax :- 
+
+    import React from 'react'
+
+    <React.Fragment>
+    <React.Fragment>
+        
+        OR
+
+  short-hand :-  <></>
