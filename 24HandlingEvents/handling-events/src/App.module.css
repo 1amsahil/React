@@ -1,0 +1,13 @@
+.Heading
+{
+    text-align: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    color: white;
+    background-color: forestgreen;
+
+    border: none;
+
+    padding: 10px;
+}
