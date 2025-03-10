@@ -1,0 +1,21 @@
+.heading
+{
+    text-align: center;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    color: white;
+    background-color:  #8AAAE5;
+
+    padding: 15px;
+}
+
+.ulist
+{
+    padding: 5px 0px;
+    margin: 18px 0px 0px 0px;
+
+    background-color:  #8AAAE5;
+    border-radius: 0px 0px 3px 3px;
+    
+}
