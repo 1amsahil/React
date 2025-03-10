@@ -4,6 +4,7 @@ import Container from "./components/Container"
 import InputComponent from "./components/InputComponent"
 import NoItem from "./components/NoItem";
 import Item from "./components/Item";
+import List from "./components/List";
 
 function App() {
 
@@ -28,22 +29,14 @@ function App() {
     console.log(event);
   };
 
-  // OnClick Handler 
-
-  let OnClick = (event)=>
-  {
-      console.log(event.target.value);
-  }
-
   return (
       <Container>
         <h2 className={styles.heading}>Grocery</h2>
 
         <InputComponent HandleOnkeyDown={OnKeyDown} />
         <NoItem list = {itemList} />
-        <ul className={styles.ulist}>
-          {itemList.map( item => <Item item={item} HandleOnClick={OnClick} key={item}  /> )}
-        </ul>
+
+        <List itemList = {itemList}/>
 
       </Container>
   )
