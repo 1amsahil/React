@@ -1,0 +1,38 @@
+.items
+{
+    display: flex;
+    align-items: center;
+    gap: 9vw;
+
+    width: 45vw;
+
+    margin: 1.5vw ;
+
+    font-family: sans-serif;
+    font-size: 1vw;
+}
+
+.task
+{
+    width: 30%;
+}
+
+
+.deleteBtn
+{
+    width: 12%;
+    height: 2vw;
+
+    border: none;
+    border-radius: 0.2vw;
+
+    background-color: rgb(230, 30, 30);
+    color: white;
+}
+
+.deleteBtn:hover
+{
+
+    background-color: rgb(160, 20, 20);
+    color: white;
+}

@@ -1,22 +1,26 @@
-import AddToDo from "./components/AddToDo";
-import AppName from "./components/AppName";
-import ItemToDo from "./components/ItemToDo";
-import './App.css'
+import AddTask from "./components/AddTask";
+import Container from "./components/Container"
+import Items from "./components/Items";
 
 function App()
 {
-  return <center className="todo-container">
 
-      <AppName/>
+  let data =
+  [
+    {task :"Learn DSA", date: "22-02-2025"},  
+    {task :"Make Projects", date: "23-02-2025"},  
+    {task :"Edit Resume", date: "24-02-2025"}  
+  ]
+  
+
+  return <>
+      <Container>
+
+        <AddTask/>
+        {data.map( (event) => <Items task = {event.task} date = {event.date} key={event.task} />  )}  
         
-      <div className="container border container-items">
-        <AddToDo/>
-        <div className="e-border">
-          <ItemToDo sub={"Buy Milk"} date={"04/10/2024"} />
-          <ItemToDo sub={"Go To College"} date={"04/10/2024"} />
-        </div>
-      </div>
-  </center>
+      </Container>
+  </>
 }
 
 export default App;
