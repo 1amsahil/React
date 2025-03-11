@@ -7,9 +7,9 @@ function App()
 
   let data =
   [
-    {task :"Learn DSA", date: "22-02-2025"},  
-    {task :"Make Projects", date: "23-02-2025"},  
-    {task :"Edit Resume", date: "24-02-2025"}  
+    {task :"Learn DSA", date: "22-Feb-2025"},  
+    {task :"Make Projects", date: "23-Feb-2025"},  
+    {task :"Edit Resume", date: "24-Feb-2025"}  
   ]
   
 
