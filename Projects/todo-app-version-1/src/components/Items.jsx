@@ -1,6 +1,6 @@
 import styles from "./Items.module.css"
 
-function Items({task, date})
+function Items({task, date, HandleOnDelete})
 {
     return <>
         <div className={styles.items}  >
@@ -11,7 +11,7 @@ function Items({task, date})
                 {date} 
             </span>
 
-            <button className={styles.deleteBtn}>Delete</button>
+            <button className={styles.deleteBtn} onClick={() => HandleOnDelete(task)} >Delete</button>
         </div>
 
     </>

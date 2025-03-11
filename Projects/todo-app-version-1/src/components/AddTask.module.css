@@ -16,7 +16,7 @@
     padding: 0.3% 1vw;
 
     border: none;
-    border-radius: 0.5vw;
+    border-radius: 0.3vw;
 }
 
 .addDate
@@ -25,7 +25,7 @@
     padding: 0.3% 1vw;
 
     border: none;
-    border-radius: 0.5vw;
+    border-radius: 0.3vw;
 }
 
 .addBtn
@@ -36,9 +36,15 @@
     border: none;
     border-radius: 3px;
 
-    background-color: lightblue;
+    background-color: #00B000;
     color: white;
 
     font-family: sans-serif;
 
+    box-shadow: inset 0 0 25px rgba(0,0,0,.25)
+}
+
+.addBtn:hover
+{
+    background-color: lightblue;
 }

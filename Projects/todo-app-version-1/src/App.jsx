@@ -1,23 +1,42 @@
+import { useState } from "react";
 import AddTask from "./components/AddTask";
 import Container from "./components/Container"
 import Items from "./components/Items";
+import Welcome from "./components/Welcome";
 
 function App()
 {
 
-  let data =
-  [
-    {task :"Learn DSA", date: "22-Feb-2025"},  
-    {task :"Make Projects", date: "23-Feb-2025"},  
-    {task :"Edit Resume", date: "24-Feb-2025"}  
-  ]
-  
+  const [todoItems, setTodoItems] = useState([{task:"Learn DSA", date:"2025-02-01"}]);
+
+  function OnAdd(itemName, itemDate)
+  {
+    if(todoItems.length !== 0)
+    {
+      let newTodoItems = [...todoItems, {task:itemName, date:itemDate}];
+      setTodoItems(newTodoItems);
+    }
+    else
+    {
+      alert("Add a Task")
+    }
+  }
+
+  function OnDelete(task)
+  {
+    let newTodoItems = todoItems.filter( (item) => item.itemName === task );
+    console.log(newTodoItems);
+    setTodoItems(newTodoItems);
+  }
+
 
   return <>
       <Container>
-
-        <AddTask/>
-        {data.map( (event) => <Items task = {event.task} date = {event.date} key={event.task} />  )}  
+        {todoItems.length == 0 && <Welcome/>}
+        
+        <AddTask HandleOnAdd={OnAdd} />
+        
+        { todoItems.map( (event) => <Items task = {event.task} date = {event.date} key = {event.task} HandleOnDelete={OnDelete}  />  )}  
         
       </Container>
   </>
