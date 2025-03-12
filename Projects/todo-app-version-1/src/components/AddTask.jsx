@@ -1,10 +1,11 @@
 import { useState } from "react"
+import { IoIosAddCircleOutline } from "react-icons/io";
 import styles from "./AddTask.module.css"
 
 function AddTask ({HandleOnAdd})
 {
-    const [taskName, setTaskName] = useState();
-    const [dueDate, setDueDate] = useState();
+    const [taskName, setTaskName] = useState("");
+    const [dueDate, setDueDate] = useState("");
 
     const OnTaskName = (event) =>
     {
@@ -30,7 +31,7 @@ function AddTask ({HandleOnAdd})
             <input type="text" placeholder = "Enter Task" value={taskName} className={styles.addTask} onChange={OnTaskName} ></input>
             <input type="date" value={dueDate} className={styles.addDate} onChange={OnDueDate} ></input>
 
-            <button className={styles.addBtn} onClick={handleOnAddButton} >Add</button>
+            <button className={styles.addBtn} onClick={handleOnAddButton} ><IoIosAddCircleOutline /> Add </button>
 
         </div>
     </>

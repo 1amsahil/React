@@ -1,4 +1,5 @@
 import styles from "./Items.module.css"
+import { MdDeleteForever } from "react-icons/md";
 
 function Items({task, date, HandleOnDelete})
 {
@@ -11,7 +12,7 @@ function Items({task, date, HandleOnDelete})
                 {date} 
             </span>
 
-            <button className={styles.deleteBtn} onClick={() => HandleOnDelete(task)} >Delete</button>
+            <button className={styles.deleteBtn} onClick={() => HandleOnDelete(task)} > <MdDeleteForever/> Delete</button>
         </div>
 
     </>

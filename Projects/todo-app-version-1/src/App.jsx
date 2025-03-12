@@ -7,11 +7,14 @@ import Welcome from "./components/Welcome";
 function App()
 {
 
-  const [todoItems, setTodoItems] = useState([{task:"Learn DSA", date:"2025-02-01"}]);
+  const [todoItems, setTodoItems] = useState([{task:"Learn DSA", date:"2025-02-01"},
+    {task:"Development", date:"2025-03-01"},
+    {task:"Edit Resume", date:"2025-04-01"},
+  ]);
 
   function OnAdd(itemName, itemDate)
   {
-    if(todoItems.length !== 0)
+    if(itemName && true )
     {
       let newTodoItems = [...todoItems, {task:itemName, date:itemDate}];
       setTodoItems(newTodoItems);
@@ -24,7 +27,7 @@ function App()
 
   function OnDelete(task)
   {
-    let newTodoItems = todoItems.filter( (item) => item.itemName === task );
+    let newTodoItems = todoItems.filter( (item) => item.task !== task );
     console.log(newTodoItems);
     setTodoItems(newTodoItems);
   }
