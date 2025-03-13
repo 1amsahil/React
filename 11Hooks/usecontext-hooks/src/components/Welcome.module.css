@@ -1,0 +1,17 @@
+.msg
+{
+    padding: 10px;
+
+    background-color: rgb(215, 85, 20);
+    color: aliceblue;
+
+    border: none;
+    border-radius: 3px;
+
+    box-shadow: 3px 3px 5px lightblue;
+
+    text-align: center;
+    text-shadow: 1.5px 1.5px 5px lightblue ;
+
+    font-size: 20px;
+}

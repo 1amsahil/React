@@ -1,0 +1,31 @@
+.container
+{
+    width: 50%;
+    height: 50%;
+
+    margin: 50px auto;
+    padding: 1.2vw;
+
+    border: none;
+    border-radius: 6px;
+
+    background-color: rgb(35, 95, 155);
+    color: white;
+
+    box-shadow: 10px 10px 5px lightblue;
+
+}
+
+.heading
+{
+    padding: 1.5vw;
+
+    text-align: center;
+    
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2vw;
+
+    border-bottom: 0.2vw solid white ;
+
+}
