@@ -16,8 +16,7 @@ function App()
   {
     if(itemName && true )
     {
-      let newTodoItems = [...todoItems, {task:itemName, date:itemDate}];
-      setTodoItems(newTodoItems);
+      setTodoItems((currVal) => [ ...currVal, {task:itemName, date:itemDate}]);
     }
     else
     {

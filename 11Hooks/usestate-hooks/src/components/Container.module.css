@@ -1,0 +1,10 @@
+.container
+{
+    margin: 10px auto;
+    
+    width: 50%;
+
+    border: 2px solid rgb(195, 195, 195);
+    border-radius: 5px;
+
+}
