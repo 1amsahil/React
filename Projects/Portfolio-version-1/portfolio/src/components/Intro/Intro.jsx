@@ -14,13 +14,13 @@ export default function Intro()
             <h2 className={styles['dev-type']}>Software Developer</h2>
 
             <div className={styles['social-handles']}>
-                <a href="https://linkedin.com/" target="_blank">
+                <a href="https://www.linkedin.com/in/mohd-sahil-jh24/" target="_blank">
                     <img src={linkedin} alt="linkedin"/>
                 </a>
-                <a href="https://github.com/" target="_blank">
+                <a href="https://github.com/1amsahil" target="_blank">
                     <img src={github} alt="linkedin"/>
                 </a>
-                <a href="" target="_blank">
+                <a href="https://leetcode.com/u/iamEternity/" target="_blank">
                     <img src={leetcode} alt="linkedin"/>
                 </a>
             </div>

@@ -26,7 +26,7 @@ export default function Skills()
                 <div className={styles["skills-section"]}>
                 <h2>Backend</h2>
                     <SkillList skillname={"Java"} percentage={"80%"} />        
-                    <SkillList skillname={"Spring"} percentage={"70%"} />         
+                    <SkillList skillname={"Spring"} percentage={"60%"} />         
                 </div>
 
             </div>

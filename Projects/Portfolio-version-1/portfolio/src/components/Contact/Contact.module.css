@@ -1,0 +1,74 @@
+.form-container
+{
+    height: 35vw;
+    margin: 3vw auto;
+}
+
+.form
+{
+    color: white;
+
+    font-family: "Roboto mono";
+    font-size: 20px;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+
+}
+
+.form input
+{
+    padding: 10px;
+    
+    width: 40vw;
+    
+    border-radius: 5px;
+
+    font-family: "Poppins";
+    font-size: 15px;
+}
+
+.form textarea
+{
+    padding: 20px;
+    
+    width: 40vw;
+    height: 4vw;
+    
+    border-radius: 5px;
+
+    font-family: "Poppins";
+    font-size: 15px; 
+
+    resize: none;
+}
+
+.form button
+{
+    margin: 10px;
+    padding: 1px 6px;
+    
+    height: 50px;
+    width: 126px;
+    
+    font-size: 20px;
+    font-family: 'Roboto Mono', monospace;
+    
+    background-color: #0987F2;
+    color: #FFFFFF;
+    
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 4px 4px;
+    
+    border-style: none;
+    border-radius: 20px;
+}
+
+.form button:hover
+{
+    background-color: #0668be;
+    transition: ease 0.25s;
+    transform: scale(1.05);   
+
+}

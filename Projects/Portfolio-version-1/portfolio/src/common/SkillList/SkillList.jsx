@@ -6,7 +6,7 @@ export default function SkillList({skillname, percentage})
         <h3>{skillname}</h3>
 
         <div className={styles["progress-bar-container"]} >
-               <div className={styles["progress-bar"]} ></div>
+               <div className={styles["progress-bar"]}  style={{width: `${percentage}`}} ></div>
         </div>
         
         <p>{percentage}</p>

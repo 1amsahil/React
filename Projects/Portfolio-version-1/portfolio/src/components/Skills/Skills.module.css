@@ -1,6 +1,7 @@
 .skills-container
 {
-    height: 40vw;
+    height: 48vw;
+    /* border: 2px solid red; */
 }
 
 .skill-subcontainer
