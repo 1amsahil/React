@@ -57,7 +57,7 @@
 
 .social-handles img:hover
 {
-    height: 3.5vw;
+    transform: scale(1.15);
     transition: ease .15s;
 }
 

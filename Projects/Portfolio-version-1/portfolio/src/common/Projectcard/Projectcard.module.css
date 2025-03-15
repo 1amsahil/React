@@ -27,10 +27,8 @@
 
 .project-card:hover
 {
-    height: 51.25vh;
-    width: 20.75vw;
-
-    transition:  ease .25s;
+    transform: scale(1.025);
+    transition:  ease .4s;
 }
 
 .project-img
