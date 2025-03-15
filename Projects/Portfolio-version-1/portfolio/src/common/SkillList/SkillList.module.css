@@ -1,0 +1,49 @@
+.list-container
+{
+    height: 5vh;
+    width: 40vw;
+
+    margin: 4vh 0px;
+    
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.list-container h3
+{
+    font-family: "Poppins";
+    font-weight: 500 ;
+
+    width: 6vw;
+}
+
+.list-container p
+{
+    font-family: "Poppins";
+    font-weight: 300 ;
+
+    width: 3vw;
+}
+
+.progress-bar-container
+{
+    height: 1vw;
+    width: 20vw;
+
+    border-radius: 20px;
+    background-color: white;
+}
+
+.progress-bar
+{
+    height: 100%;
+    width: 80%;
+
+    border-radius: 20px;
+    background-color: dodgerblue;
+}

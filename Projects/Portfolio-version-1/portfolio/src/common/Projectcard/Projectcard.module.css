@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.project-container
+{
+    height: 60vh;
+    width: 21vw;
+
+    /* border: 2px solid red; */
+}
+
+.project-card
+{
+    color: white;
+
+    margin: 4vw auto;
+
+    height: 50vh;
+    width: 20vw;
+
+    text-align: center;
+    font-family: "Roboto Mono", monospace;
+
+    /* border: 2px solid red; */
+
+}
+
+.project-card:hover
+{
+    height: 51.25vh;
+    width: 20.75vw;
+
+    transition:  ease .25s;
+}
+
+.project-img
+{
+    height: 88%;
+    width: 90%;
+    
+    object-fit: cover;
+    
+    border-radius: 20px;
+    /* border: 2px solid red; */
+    background-color: white;
+}
+
+.project-title
+{ 
+    height: 20%;
+}
+
+.project-title h2
+{ 
+    font-family: "Poppins";
+    font-weight: 500 ;
+}
+
+.project-title p
+{ 
+    font-weight: 200 ;
+    letter-spacing: 2px;
+
+}

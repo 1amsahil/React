@@ -1,0 +1,13 @@
+.heading
+{
+    margin: 6vh;
+
+    color: white;
+
+    font-family: "Poppins";
+    font-size: 45px;
+
+    text-align: center;
+    /* border: 2px solid red; */
+
+}

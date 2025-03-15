@@ -1,0 +1,26 @@
+.skills-container
+{
+    height: 40vw;
+}
+
+.skill-subcontainer
+{
+    display: flex;
+    justify-content: center;
+
+}
+
+.skills-section
+{
+    padding-top: 10px;
+    margin: 10px;
+
+    border-radius: 10px ;
+    border: 2px solid white;
+
+    color: white;
+
+    font-family: "Roboto Mono", monospace;
+    font-weight: 400;
+    text-align: center;
+}
