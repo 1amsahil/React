@@ -9,6 +9,11 @@
     /* border: 2px solid red; */
 }
 
+a
+{
+    text-decoration: none;
+}
+
 .project-card
 {
     color: white;
