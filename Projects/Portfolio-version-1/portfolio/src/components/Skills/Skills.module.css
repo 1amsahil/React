@@ -1,6 +1,6 @@
 .skills-container
 {
-    height: 48vw;
+    height: 100%;
     /* border: 2px solid red; */
 }
 
@@ -24,4 +24,27 @@
     font-family: "Roboto Mono", monospace;
     font-weight: 400;
     text-align: center;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+    
+    .skills-section
+    {
+        width: 80vw;
+        
+        padding-top: 10px;
+        margin: 10px;
+    
+        border-radius: 10px ;
+        border: 2px solid white;
+    
+        color: white;
+    
+        font-family: "Roboto Mono", monospace;
+        font-weight: 400;
+        text-align: center;
+    }
+
 }

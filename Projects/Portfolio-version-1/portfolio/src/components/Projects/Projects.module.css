@@ -1,10 +1,27 @@
+hr
+{
+    background-color: white;
+}
 
 .project-container
 {
-    height: 35vw;
+    height: 80vh;
     width: 100%;
 
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
+@media screen and (max-width: 800px) {
+
+    .project-container
+    {
+        display: grid;
+        height: 100%;
+        width: 100vw;
+
+        /* border: 2px solid red; */
+    }
+    
+  }

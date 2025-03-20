@@ -4,8 +4,7 @@
 .project-container
 {
     height: 60vh;
-    width: 21vw;
-
+    width: 22vw;
     /* border: 2px solid red; */
 }
 
@@ -18,16 +17,12 @@ a
 {
     color: white;
 
-    margin: 4vw auto;
-
-    height: 50vh;
-    width: 20vw;
+    margin: 4vh auto;
 
     text-align: center;
     font-family: "Roboto Mono", monospace;
 
     /* border: 2px solid red; */
-
 }
 
 .project-card:hover
@@ -57,6 +52,7 @@ a
 { 
     font-family: "Poppins";
     font-weight: 500 ;
+    font-size: 1.2rem;
 }
 
 .project-title p
@@ -65,3 +61,22 @@ a
     letter-spacing: 2px;
 
 }
+
+/* Responsive */
+
+@media screen and (max-width: 800px) {
+
+    .project-container
+    {
+        height: 100%;
+        width: 100%;
+
+        /* border: 2px solid red; */
+    }
+
+    .project-img
+    {
+        width: 40vw;
+    }
+    
+  }

@@ -2,12 +2,13 @@
 {
     height: 5vw;
     text-align: center;
-    margin-top: 5vw ;
+    margin: 8vh ;
+    /* border: 2px solid red; */
 }
 
 .footer-info
 {
     color: #888;
     font-family: "Roboto mono";
-    font-size: 16px;
+    font-size: 0.8rem;
 }

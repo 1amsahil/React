@@ -9,6 +9,11 @@ import styles from './Intro.module.css';
 export default function Intro()
 {
     return<div className={styles['intro-container']}>
+
+        <div className={styles['img-container']} >
+            <img src={profile} className={styles['profile-img']} />
+        </div>
+
         <div className={styles['intro-info']}>
             <h2 className={styles['name']}>Mohd Sahil </h2>
             <h2 className={styles['dev-type']}>Software Developer</h2>
@@ -34,8 +39,5 @@ export default function Intro()
             </a>
         </div>
 
-        <div className={styles['img-container']} >
-            <img src={profile} className={styles['profile-img']} />
-        </div>
     </div>
 }

@@ -7,6 +7,7 @@ export default function Projects()
 {
     return <>
             <div className={styles['project']} >
+                <hr />
                     <Heading headingname={"PROJECTS"} />
                 <div className={styles['project-container']}>
                    <Projectcard src={musicin} title={"MusicIn"} para={"Music Streaming App"} link={"https://musicin.onrender.com/"} />
