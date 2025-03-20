@@ -12,14 +12,17 @@ export const ContextPostList = createContext(
 // Reducer
 const Reducer = (currPostData, action) =>
 {
-  const newPostData = currPostData;
+  let newPostData = currPostData;
+  console.log(newPostData);
 
   if(action.type === "ADD_POST") {
-    newPostData = [...postData, data];
+    // newPostData = [...currPostData, action.payload];
   }
 
   else if(action.type === "DELETE_POST") {
-    newPostData = postData.filter( (thisData) => { (data !== thisData ? data : null) })
+    console.log(action);
+    newPostData = currPostData.filter( (post) => (post.id !== action.payload.id ? post: null ))
+    console.log(newPostData);
   }
 
   return newPostData;
@@ -45,16 +48,16 @@ const PostListContainer = ({children}) => {
   }
 
   // Delete Function
-  const deletePost = (data) => {
-    console.log("Deleted");
+  const deletePost = (id) => {
+    console.log("Deleted",id);
 
     let DP = 
     {
       type : "DELETE_POST",
-      payload : {data}
+      payload : {id}
     }
 
-    dispatcher();
+    dispatcher(DP);
   }
 
   return (
@@ -75,7 +78,7 @@ const DEFAULT_POST_LIST = [
     body : "Hello Guys , I am going to Dubai for my internship",
     reactions : 5,
     userId : "user@161",
-    tags : ["intership", "Dubai", "Coding"],
+    tags : ["Intership", "Dubai", "Coding"],
   },
 
   {
