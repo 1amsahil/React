@@ -1,0 +1,10 @@
+.post-form
+{
+    width: 35vw;
+    margin: 3vw auto;
+}
+
+textarea
+{
+    resize: none;
+}

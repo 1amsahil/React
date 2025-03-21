@@ -13,16 +13,15 @@ export const ContextPostList = createContext(
 const Reducer = (currPostData, action) =>
 {
   let newPostData = currPostData;
-  console.log(newPostData);
 
   if(action.type === "ADD_POST") {
-    // newPostData = [...currPostData, action.payload];
+    newPostData = [ action.payload, ...currPostData];
   }
 
   else if(action.type === "DELETE_POST") {
-    console.log(action);
+
     newPostData = currPostData.filter( (post) => (post.id !== action.payload.id ? post: null ))
-    console.log(newPostData);
+
   }
 
   return newPostData;
@@ -35,21 +34,28 @@ const PostListContainer = ({children}) => {
   const [postData ,dispatcher ] = useReducer(Reducer, DEFAULT_POST_LIST );
 
   // Add Function
-  const addPost = (data) => {
-    console.log("Added");
+  const addPost = (userId, postTitle, postBody, reactions, tags) => {
+    console.log(userId, postTitle, postBody, reactions, tags);
 
-    let AP = 
+    dispatcher(
     {
       type : "ADD_POST",
-      payload : {data}
-    }
+      payload :
+      
+      { id : `${Date.now()}-${Math.random()}`,
+        title : postTitle,
+        body : postBody,
+        reactions : reactions,
+        userId : userId,
+        tags : tags,
+      }
 
-    dispatcher();
+    })
+
   }
 
   // Delete Function
   const deletePost = (id) => {
-    console.log("Deleted",id);
 
     let DP = 
     {
@@ -75,10 +81,10 @@ const DEFAULT_POST_LIST = [
   {
     id : "1",
     title : "Going to Dubai",
-    body : "Hello Guys , I am going to Dubai for my internship",
+    body : "Hello Guys , I am going to Dubai for my vacations",
     reactions : 5,
     userId : "user@161",
-    tags : ["Intership", "Dubai", "Coding"],
+    tags : ["Vaccation", "Dubai", "Coding"],
   },
 
   {
