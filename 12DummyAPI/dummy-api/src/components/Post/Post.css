@@ -1,0 +1,25 @@
+.post-card
+{
+    /* text-align: center; */
+    margin: 5vh auto;
+    min-height: 25vh;
+}
+
+.hashtag
+{
+    margin:  0.3vw 0.5vw;
+}
+
+.reactions
+{
+    height: 3vw;
+    padding: 10px;
+
+    background-color: hsl(160, 80%, 40%);
+    color: white;
+
+    border-radius: 0px 0px 5px 5px;
+    font-size: 16px;
+    font-weight: 600; 
+
+}
