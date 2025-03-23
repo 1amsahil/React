@@ -19,3 +19,18 @@
 {
     min-height: 100vh;
 }
+
+.loading-spinner
+{
+    text-align: center;
+    margin: 5vw;
+}
+
+.spinner
+{
+    height: 5vw;
+    width: 5vw;
+
+    margin: 10px;
+    transition: ease 1s;
+}
