@@ -1,0 +1,14 @@
+.welcome-message
+{
+    margin: 10vh auto;
+    height: 80vh;
+    width: 50vw;
+
+    text-align: center;
+}
+
+h1
+{
+    font-family: "Poppins";
+    height: 15vh;
+}
