@@ -4,7 +4,7 @@ import { createContext, useReducer, useState, useEffect } from "react"
 export const ContextPostList = createContext(
   {
     postData : [],
-    fetching : false,
+    // fetching : false,
     addPost : () => {},
     deletePost : () => {},
   }
@@ -73,34 +73,34 @@ const PostListContainer = ({children}) => {
   }
 
     
-  const [fetching, setFetching] = useState(false);
+  // const [fetching, setFetching] = useState(false);
 
   // useEffect
-  useEffect(() => {
+  // useEffect(() => {
 
-    const controller = new AbortController();
-    const signal = controller.signal;
+    // const controller = new AbortController();
+    // const signal = controller.signal;
 
-    setFetching(true);
+    // setFetching(true);
     
-    fetch("https://dummyjson.com/posts", {signal})
-    .then( res => res.json() )
-    .then( (data) => {
-      addInitialPosts(data.posts);
+    // fetch("https://dummyjson.com/posts", {signal})
+    // .then( res => res.json() )
+    // .then( (data) => {
+    //   addInitialPosts(data.posts);
 
-      setFetching(false);
-    })
+    //   setFetching(false);
+    // })
     
     // return () => {
     //   console.log("Cleaning up useEffect");
     //   controller.abort();
     // }
 
-  } , []);
+  // } , []);
 
   
   return (
-        <ContextPostList.Provider value = { {postData, fetching, addPost, deletePost} }>
+        <ContextPostList.Provider value = { {postData, /*fetching,*/ addPost, deletePost} }>
           {children}
         </ContextPostList.Provider>
     )

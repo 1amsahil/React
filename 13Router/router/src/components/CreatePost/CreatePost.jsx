@@ -1,58 +1,13 @@
-import { useContext, useRef } from "react"
-import { ContextPostList } from "../../store/Post-list-store";
+
+import { Form, redirect } from "react-router-dom";
 import "./CreatePost.css"
-import { useNavigate } from "react-router-dom";
+
 
 export default function CreatePost() {
 
-  const {addPost} = useContext(ContextPostList)
-  const navigate = useNavigate();
+  // const {addPost} = useContext();
 
-  const userIdElement = useRef();
-  const postTitleElement = useRef();
-  const postBodyElement = useRef();
-  const reactionsElement = useRef();
-  const tagsElement = useRef();
-
-  const handleonSubmit = (event) =>
-  {
-    event.preventDefault();
-    const userId = userIdElement.current.value;
-    const postTitle = postTitleElement.current.value;
-    const postBody = postBodyElement.current.value;
-    const reactions = reactionsElement.current.value;
-    const tags = tagsElement.current.value.split(" ");
-
-
-    fetch('https://dummyjson.com/posts/add', {
-      method: 'POST',
-      headers : {'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        userId : userId,
-        title :postTitle,
-        body : postBody,
-        reactions : {
-          likes : reactions,
-        },
-        tags : tags,
-      }),
-      
-    }).then((res) => res.json())
-    .then(post => {
-
-        addPost(post); 
-        // navigate("/");
-      });
-
-    // userIdElement.current.value = "";
-    // postTitleElement.current.value = "";
-    // postBodyElement.current.value = "";
-    // reactionsElement.current.value = "";
-    // tagsElement.current.value = "";
-
-    }
-
-  return <form className="post-form" onSubmit={handleonSubmit} >
+  return <Form method="POST" className="post-form" >
 
     <div className="mb-3">
       <label htmlFor="id" className="form-label">User-Id</label>
@@ -60,7 +15,7 @@ export default function CreatePost() {
       type="text" 
       className="form-control" 
       id="id" 
-      ref={userIdElement}
+      name = "userId"
       placeholder="Enter your User-Id" />
     </div>
 
@@ -70,9 +25,8 @@ export default function CreatePost() {
       type="text" 
       className="form-control" 
       id="title" 
-      ref={postTitleElement}
+      name = "title"
       placeholder="How are you feeling today..." />
-
     </div>
     
     <div className="mb-3">
@@ -81,7 +35,7 @@ export default function CreatePost() {
       type="text" 
       className="form-control" 
       id="body" 
-      ref={postBodyElement}
+      name = "body"
       placeholder="Tell us about more" 
       rows={3} />
     </div>
@@ -92,7 +46,7 @@ export default function CreatePost() {
       type="text" 
       className="form-control" 
       id="reactions" 
-      ref={reactionsElement}/>
+      name = "reactions"/>
     </div>
 
     <div className="mb-3">
@@ -101,10 +55,30 @@ export default function CreatePost() {
       type="text" 
       className="form-control" 
       id="tags" placeholder="please enter tags using space" 
-      ref={tagsElement}/>
+      name = "tags"/>
     </div>
 
     <button type="submit" className="btn btn-primary">Post</button>
-  </form>
+  </Form>
+}
+
+export const createPostAction = async (data) => {
+
+  const formData = await data.request.formData();
+  const postData = Object.fromEntries(formData);
+  postData.tags = postData.tags.split(" ");   
+
+  console.log(postData);
+
+  fetch('https://dummyjson.com/posts/add', {
+    method: 'POST',
+    headers : {'Content-Type': 'application/json' },
+    body: JSON.stringify( postData )  
+  })
+
+  .then((res) => res.json())
+  .then(post => { console.log(post) });
+
+  return redirect("/")
 
 }
