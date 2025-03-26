@@ -1,10 +1,12 @@
 import { useContext, useRef } from "react"
 import { ContextPostList } from "../../store/Post-list-store";
 import "./CreatePost.css"
+import { useNavigate } from "react-router-dom";
 
 export default function CreatePost() {
 
   const {addPost} = useContext(ContextPostList)
+  const navigate = useNavigate();
 
   const userIdElement = useRef();
   const postTitleElement = useRef();
@@ -29,12 +31,18 @@ export default function CreatePost() {
         userId : userId,
         title :postTitle,
         body : postBody,
-        reactions : reactions,
+        reactions : {
+          likes : reactions,
+        },
         tags : tags,
       }),
       
     }).then((res) => res.json())
-    .then(post => addPost(post) );
+    .then(post => {
+
+        addPost(post); 
+        // navigate("/");
+      });
 
     // userIdElement.current.value = "";
     // postTitleElement.current.value = "";
@@ -95,8 +103,6 @@ export default function CreatePost() {
       id="tags" placeholder="please enter tags using space" 
       ref={tagsElement}/>
     </div>
-
-
 
     <button type="submit" className="btn btn-primary">Post</button>
   </form>

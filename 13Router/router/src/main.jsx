@@ -6,10 +6,11 @@ import CreatePost from './components/CreatePost/CreatePost.jsx'
 import PostList from './components/Post/PostList.jsx'
 
 const router = createBrowserRouter([
-  { path : "/home", element : <App/> },
+  
   { path : "/", element : <App/>,
     children : 
     [
+      { path : "/home", element : <PostList/> },
       { path : "/", element : <PostList/> },
       { path : "/createpost", element : <CreatePost/> },
     ]

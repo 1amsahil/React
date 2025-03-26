@@ -6,9 +6,9 @@ export default function Sidebar()
 
   const [selectedTab, setSelectedTab] = useState("Home");
 
-  // const HandleOnTab = (event) => {
-  //   setSelectedTab(event.target.text);
-  // }
+  const HandleOnTab = (event) => {
+    setSelectedTab(event.target.text);
+  }
 
     return <div className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark sidebar " style = {{width: "200px"}}>
     
@@ -21,9 +21,8 @@ export default function Sidebar()
 
     <ul className="nav nav-pills flex-column mb-auto">
       <li className="nav-item" 
-      // onClick={HandleOnTab} 
+      onClick={HandleOnTab} 
       >
-
         <Link to="/" className={"nav-link text-white "+ (selectedTab == "Home" ? "active" : null)} aria-current="page">
           <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
           Home
@@ -31,7 +30,7 @@ export default function Sidebar()
       </li>
       
       <li 
-      // onClick={HandleOnTab} 
+      onClick={HandleOnTab} 
       >
         <Link to="/createpost" className={"nav-link text-white "+ (selectedTab == "Create Post" ? "active" : null)}>
           <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
