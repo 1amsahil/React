@@ -7,7 +7,7 @@ export const DisplayCounter = () => {
   return (
     <div>
         <p className="">
-            counter current value : {counter}
+        Current Counter Value : {counter}
         </p>
     </div>
   )

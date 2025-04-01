@@ -24,11 +24,20 @@ export default function Controls() {
     })
   }
 
+  const handleOnPrivacy = () =>
+  {
+    dispatch(
+    {
+      type : "PRIVACY_TOGGLE",  
+    })
+  }
+
   return (
     <div>
         <button type="button" className="button" onClick={handleOnIncrement} >+1</button>
         <button type="button" className="button red" onClick={handleOnDecrement} >-1</button>
         <button type="button" className="button green" onClick={handleOnAddition} >+10</button>
+        <button type="button" className="button " onClick={handleOnPrivacy} >Privacy Toggle</button>
     </div>
   )
 }
