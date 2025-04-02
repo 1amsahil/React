@@ -1,0 +1,127 @@
+.navbar
+{
+    width: 100%;
+    height: 100px;
+    /* background-color: skyblue; */
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-icon-box 
+{
+    margin: 20px 50px;
+    
+    height: 45px;
+    width: 170px;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    
+    border: none;
+    border-radius: 20px;
+
+    box-shadow: 3px 3px 1px grey;
+}
+
+.food-icon
+{
+    height: 30px;
+    width: 30px;
+
+}
+
+.app-name
+{
+    margin: 10px;
+    padding: 0px 10px;
+
+    font-family: "Poppins";
+    font-size: 20px;
+    font-weight: 700;
+
+    background-color: red;
+}
+
+.search-container
+{
+    height: 30px;
+    width: 60%;
+
+    margin: 20px;
+    padding: 5px 10px;
+    
+    background-color: white;
+
+    border: none;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow: 1px 1px 5px grey;
+}
+
+.search-icon
+{
+    color: orange;
+    height: 20px;
+    width: 20px;
+}
+
+.search-box
+{
+    height: 40px;
+    width: 100%;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 16px;
+    
+    outline: none;
+}
+
+.cart-icon-box
+{
+    margin: 20px 50px;
+    
+    height: 45px;
+    width: 45px;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    
+    border-radius: 10px;
+
+    box-shadow: 1px 1px 8px grey;
+}
+
+.item-num
+{
+    position: absolute;
+    top: 20px;
+    right: 53px;
+
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 700;
+    color: red;
+}
+
+.cart-icon
+{
+    position: relative;
+
+    height: 30px;
+    width: 30px;
+}
