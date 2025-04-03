@@ -1,0 +1,77 @@
+.cart-card-container
+{
+    margin: 25px;
+    height: 10vw;
+    width: 90%;
+    
+    border-radius: 15px;
+
+    box-shadow: 1px 1px 5px grey;
+}
+
+.cart-card
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.cart-card img
+{
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+
+.info
+{
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.quantity-info
+{
+    width: 8vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.minus-btn
+{
+
+    height: 100%;
+    width: 40%;
+    
+    font-size: 20px;
+    
+    border: none;
+    border-radius: 3px;
+
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    
+}
+
+.quantity
+{
+    margin: auto;
+    width: 10%;
+}
+
+.pulse-btn
+{
+    height: 100%;
+    width: 40%;
+    
+    font-size: 20px;
+    
+    border: none;
+    border-radius: 3px;
+
+    background-color: hsl(0, 0%, 0%);
+    color: white;
+    
+}

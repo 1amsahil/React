@@ -1,0 +1,53 @@
+.cart-sidebar
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 40vw;
+    height: 100%;
+
+    background-color: white;
+}
+
+.cart-header
+{
+    margin: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: "Poppins";
+
+    color: green;
+}
+
+.cross-icon
+{
+    height: 40px;
+    width: 40px;
+
+    color: #333;
+    cursor: pointer;
+}
+
+.cross-icon:hover
+{
+    height: 40px;
+    width: 40px;
+
+    color: #888;
+}
+
+.translate-zero
+{
+    transform: translateX(0px);
+    transition: ease 0.5s;
+}
+
+.translate-full
+{
+    transform: translateX(100%);
+    transition: ease 0.5s;
+}
