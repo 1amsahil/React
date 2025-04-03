@@ -27,11 +27,18 @@
     box-shadow: 3px 3px 1px grey;
 }
 
+.food-icon-box:hover
+{
+    background-color: hsl(35, 100%, 80%);
+    color: orange;
+
+    transition: ease 0.25s;
+}
+
 .food-icon
 {
     height: 30px;
     width: 30px;
-
 }
 
 .app-name
@@ -51,7 +58,7 @@
     height: 30px;
     width: 60%;
 
-    margin: 20px;
+    margin: 25px 20px;
     padding: 5px 10px;
     
     background-color: white;
@@ -66,6 +73,24 @@
     gap: 10px;
 
     box-shadow: 1px 1px 5px grey;
+}
+
+.search-container:hover
+{
+    box-shadow: 1px 1px 5px hsl(0, 0%, 30%);
+
+    .search-icon
+    {
+        height: 22px;
+        width: 22px;
+
+        transition: ease 0.15s;
+    }
+}
+
+.search-icon-box
+{
+    width: 25px;
 }
 
 .search-icon
@@ -92,8 +117,8 @@
 {
     margin: 20px 50px;
     
-    height: 45px;
-    width: 45px;
+    height: 57px;
+    width: 60px;
 
     background-color: white;
 
@@ -101,16 +126,28 @@
     justify-content: center;
     align-items: center; 
     
-    border-radius: 10px;
+    border-radius: 50%;
 
     box-shadow: 1px 1px 8px grey;
+    cursor: pointer;
+}
+
+.cart-icon-box:hover
+{
+    box-shadow: 1px 1px 7px grey;
+
+    .cart-icon
+    {
+        color: dodgerblue;
+        transition: ease 0.15s;
+    }
 }
 
 .item-num
 {
     position: absolute;
-    top: 20px;
-    right: 53px;
+    top: 25px;
+    right: 60px;
 
     font-family: "Roboto";
     font-size: 16px;

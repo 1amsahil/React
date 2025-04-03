@@ -16,14 +16,16 @@ export default function Nav() {
       <div>
       </div>
         <form className="search-container">
-          <IoSearch className="search-icon" />
+          <div className="search-icon-box">
+            <IoSearch className="search-icon" />
+          </div>
           <input type="text" placeholder="Search Items..." className="search-box" />
         </form> 
        
 
       <div className="cart-icon-box">
         <TiShoppingCart className="cart-icon" />
-        <span className="item-num" >0</span>
+        <span className="item-num" ><label>0</label></span>
       </div>
 
     </div>

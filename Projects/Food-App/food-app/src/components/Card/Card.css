@@ -1,0 +1,98 @@
+.card-container
+{
+    height: 26vw;
+    width: 16vw;
+}
+
+.card
+{
+    height: 25vw;
+    width: 15vw;
+
+    border: 2px solid #9999;
+    border-radius: 20px;
+
+    box-shadow: 1px 1px 5px grey;
+
+    position: relative;
+}
+
+.card:hover
+{
+    border: 3px solid #444;
+}
+
+.card-image
+{
+    height: 15vw;
+    width: 100%;
+
+    border-radius: 18px 18px 0px 0px;
+
+    object-fit: cover;
+}
+
+.card-item-name
+{
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 600;
+
+    margin-left: 15px;
+}
+
+
+.lower-card-info
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: hsl(130, 85%, 40%);
+    font-family: "Poppins";
+
+    padding: 10px 15px;
+}
+
+.card-item-type
+{
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.color-red
+{
+    color: red;
+}
+
+.add-item-btn
+{
+    margin: 5px 10px;
+    padding: 7px 65px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-family: "Roboto";
+    font-size: 16px;
+
+    background-color: hsl(222, 100%, 50%);
+    color: white;
+
+    box-shadow: 2px 2px 5px skyblue;
+
+    position: absolute;
+
+    cursor: pointer;
+}
+
+.add-item-btn:hover
+{
+    background-color: dodgerblue;
+}
+

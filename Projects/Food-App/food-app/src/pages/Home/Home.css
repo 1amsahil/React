@@ -1,0 +1,26 @@
+.category-container
+{
+    height: 59px;
+    width: 100%;
+
+    border: none;
+
+    box-shadow: 1px 1px 5px grey;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.food-items
+{
+    margin: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+
+    flex-wrap: wrap;
+}
