@@ -1,8 +1,28 @@
 import "./Card.css"
 import Veg from "../../assets/svg/veg.svg"
 import NonVeg from "../../assets/svg/nonveg.svg"
+import { useDispatch } from "react-redux"
+import { cartAction } from "../../store/CartSlice";
+
 
 export default function Card({name, image, id, price, type}) {
+
+    let dispatch = useDispatch();
+    let action = cartAction;
+
+    function handleAddDispatch() 
+    {
+        dispatch(action.AddItem(
+            {
+                id : id,
+                name : name,
+                price : price,
+                type : type,
+                image : image,
+                qty : 1,
+            }))
+    }
+
   return (
     <div className="card-container"> 
         <div className="card" >
@@ -31,7 +51,7 @@ export default function Card({name, image, id, price, type}) {
                     </div>
                 </div>
 
-                <button className="add-item-btn"> Add Item</button>
+                <button className="add-item-btn" onClick={handleAddDispatch} > Add Item</button>
 
             </div>
 

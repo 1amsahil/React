@@ -6,6 +6,7 @@ import "./Nav.css"
 import { useContext, useEffect } from "react";
 import { dataContext } from "../../context/UserContext";
 import food_items from "../../data/food";
+import { useSelector } from "react-redux";
 
 export default function Nav() {
 
@@ -16,6 +17,8 @@ export default function Nav() {
     let new_food_items = food_items.filter((item) => item.food_name.includes(input) ||  item.food_name.toLowerCase().includes(input));
     setCategory(new_food_items);
   },[input])
+
+  let items = useSelector( state => state.cart)
 
   return <>
     <div className='navbar' >
@@ -35,7 +38,7 @@ export default function Nav() {
 
       <div className="cart-icon-box" onClick={ () => setShowCart(true)} >
         <TiShoppingCart className="cart-icon" />
-        <span className="item-num" ><label>0</label></span>
+        <span className="item-num" ><label>{items.length}</label></span>
       </div>
 
     </div>

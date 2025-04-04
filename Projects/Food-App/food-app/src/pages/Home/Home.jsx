@@ -35,7 +35,7 @@ export default function Home() {
           </div> : null }
           
           <div className="food-items">
-            {category.map( item => <Card name={item.food_name} image={item.food_image} price={item.price} type={item.food_type} key={item.id} /> )}  
+            {category.map( item => <Card name={item.food_name} image={item.food_image} price={item.price} type={item.food_type} key={item.id} id={item.id} /> )}  
           </div>
 
           <Cart/>

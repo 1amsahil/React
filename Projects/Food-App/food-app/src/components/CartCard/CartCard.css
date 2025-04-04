@@ -1,77 +1,85 @@
-.cart-card-container
+.cart-card
 {
     margin: 25px;
-    height: 10vw;
+    min-height: 10vw;
     width: 90%;
     
     border-radius: 15px;
-
-    box-shadow: 1px 1px 5px grey;
-}
-
-.cart-card
-{
+    
+    box-shadow: 2px 2px 5px grey;
+    
     display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 2.5vw;
 }
 
 .cart-card img
 {
     border-radius: 10px;
-    margin: 5px 10px;
 }
 
-.info
+.item-container
 {
     font-family: "Roboto";
     font-size: 18px;
     font-weight: 500;
+
+    text-align: center;
+    width: 35%;
+    
 }
 
 .quantity-info
 {
-    width: 8vw;
-
+    margin-top: 10px;
+    width: 100%;
+    
     display: flex;
     align-items: center;
     justify-content: center;
 
 }
 
-.minus-btn
-{
-
+.quantity-btn
+{ 
     height: 100%;
-    width: 40%;
+    width: 20%;
     
     font-size: 20px;
     
     border: none;
     border-radius: 3px;
-
-    background-color: hsl(0, 0%, 0%);
-    color: white;
     
+    background-color: hsl(0, 0%, 0%);
+    color: white;  
 }
 
 .quantity
 {
-    margin: auto;
     width: 10%;
 }
 
-.pulse-btn
+.item-price
 {
-    height: 100%;
-    width: 40%;
-    
-    font-size: 20px;
-    
-    border: none;
-    border-radius: 3px;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 600;
+    color: green;
+}
 
-    background-color: hsl(0, 0%, 0%);
-    color: white;
-    
+.delete-container
+{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-btn
+{
+   height: 25px;
+   width: 25px;
+
+   color: hsl(0, 68%, 50%);
+   cursor: pointer;
 }

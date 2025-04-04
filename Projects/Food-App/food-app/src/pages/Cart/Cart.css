@@ -51,3 +51,10 @@
     transform: translateX(100%);
     transition: ease 0.5s;
 }
+
+.side-cart
+{
+    max-height: 55vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
