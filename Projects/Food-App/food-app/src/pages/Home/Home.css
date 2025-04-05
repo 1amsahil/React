@@ -24,3 +24,7 @@
 
     flex-wrap: wrap;
 }
+.food-items::-webkit-scrollbar 
+{
+    display: none;
+}

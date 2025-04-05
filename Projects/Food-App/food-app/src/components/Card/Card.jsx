@@ -44,14 +44,14 @@ export default function Card({name, image, id, price, type}) {
 
                     <div className="card-item-type" >
 
-                        {type=="veg" ?<> <img src={Veg} alt="veg" height={"15px"} width={"15px"} /> <span>{type}</span> </>
+                        {type=="veg" ? <> <img src={Veg} alt="veg" height={"15px"} width={"15px"} /> <span><label>{type}</label> </span> </>
                         : <> <img src={NonVeg} alt="veg" height={"20px"} width={"20px"} /> <span className="color-red" > <label>{type}</label> </span> </>
                     }
                         
                     </div>
                 </div>
 
-                <button className="add-item-btn" onClick={handleAddDispatch} > Add Item</button>
+                <button className="add-item-btn" onClick={handleAddDispatch}> Add Item</button>
 
             </div>
 

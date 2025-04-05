@@ -12,7 +12,7 @@
 
 .cart-header
 {
-    margin: 30px;
+    margin: 20px 30px 10px 30px;
 
     display: flex;
     align-items: center;
@@ -54,7 +54,93 @@
 
 .side-cart
 {
-    max-height: 55vh;
+    max-height: 46.5vh;
     overflow: scroll;
     overflow-x: hidden;
+}
+
+.bill
+{
+    height: 7vw;
+    width: 90%;
+    margin: 15px;
+    
+    border-style: solid;
+    border-color: #333;
+
+    border-right: 2px ;
+    border-left: 2px;
+}
+
+.bill-content
+{
+    margin: 10px 15px;
+    
+    display: flex;
+    align-items: center;
+    gap: 20vw;
+
+    font-family: "Roboto";
+}
+
+.bill-type
+{
+    min-width: 6vw;
+}
+
+.total-bill 
+{
+    margin: 0px 55px;
+    
+    display: flex;
+    align-items: center;
+    gap: 20vw;
+
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.placeorder-container
+{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.placeorder-btn
+{
+    width: 70%;
+    margin: 20px 10px;
+    padding: 7px 65px;
+
+    border: none;
+    border-radius: 15px;
+
+    font-family: "Roboto";
+    font-size: 16px;
+
+    background-color: hsl(120, 75%, 40%);
+    color: white;
+
+    box-shadow: 2px 2px 5px skyblue;
+    cursor: pointer;
+}
+
+.placeorder-btn:hover
+{
+    background-color: hsl(120, 75%, 30%);
+
+    transition: ease 0.25s;
+}
+
+.no-item
+{
+    margin-top: 50px;
+    width: 90%;
+    text-align: center;
+
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
 }

@@ -35,7 +35,6 @@ export default function Nav() {
         <input type="text" placeholder="Search Items..." className="search-box" onChange={(e) => setInput(e.target.value) } value={input} />
       </form> 
        
-
       <div className="cart-icon-box" onClick={ () => setShowCart(true)} >
         <TiShoppingCart className="cart-icon" />
         <span className="item-num" ><label>{items.length}</label></span>

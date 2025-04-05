@@ -1,6 +1,6 @@
 .cart-card
 {
-    margin: 25px;
+    margin: 5px 25px;
     min-height: 10vw;
     width: 90%;
     
@@ -17,6 +17,7 @@
 .cart-card img
 {
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .item-container
@@ -52,12 +53,14 @@
     border-radius: 3px;
     
     background-color: hsl(0, 0%, 0%);
-    color: white;  
+    color: white; 
+    
+    cursor: pointer; 
 }
 
 .quantity
 {
-    width: 10%;
+    width: 15%;
 }
 
 .item-price
