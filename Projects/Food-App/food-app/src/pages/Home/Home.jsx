@@ -34,9 +34,10 @@ export default function Home() {
             { CategoriesData.map( item => <Category item={item} key={item.id} handleOnCate={filter} /> ) }
           </div> : null }
           
-          <div className="food-items">
+          { (category.length>0) ? <div className="food-items">
             {category.map( item => <Card name={item.food_name} image={item.food_image} price={item.price} type={item.food_type} key={item.id} id={item.id} /> )}  
-          </div>
+          </div> : <div className='no-food-items'>No Item Found</div>
+          }
 
           <Cart/>
 

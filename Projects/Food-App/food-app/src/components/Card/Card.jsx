@@ -3,6 +3,7 @@ import Veg from "../../assets/svg/veg.svg"
 import NonVeg from "../../assets/svg/nonveg.svg"
 import { useDispatch } from "react-redux"
 import { cartAction } from "../../store/CartSlice";
+import { toast } from "react-toastify";
 
 
 export default function Card({name, image, id, price, type}) {
@@ -21,6 +22,8 @@ export default function Card({name, image, id, price, type}) {
                 image : image,
                 qty : 1,
             }))
+
+        toast.success("item added")
     }
 
   return (

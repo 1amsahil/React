@@ -32,6 +32,11 @@ const cartSlice = createSlice(
             DecrementQty :(state, action) => 
             {
                 return state.map((item) => item.id === action.payload ? {...item, qty: item.qty-1}:item);
+            },
+
+            DeleteAllItems : (state) =>
+            {
+                return state = [];
             }
         }
     }

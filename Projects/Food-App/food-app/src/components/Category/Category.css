@@ -1,15 +1,13 @@
 .category
 {
-    padding: 3px 20px;
+    padding: 0px 15px;
     
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
 
     border: none;
     border-radius: 50px;
-
 }
 
 .category:hover

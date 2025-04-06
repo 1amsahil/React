@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import "./Cart.css"
 import { IoClose } from "react-icons/io5";
 import { dataContext } from "../../context/UserContext";
 import CartCard from "../../components/CartCard/CartCard";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { cartAction } from "../../store/CartSlice";
 
 export default function Cart() {
 
@@ -15,6 +17,14 @@ export default function Cart() {
     let deliveryFee = 20;
     let taxes = (subtotal*(0.05)).toFixed(2);
     let total = subtotal + deliveryFee + (Number)(taxes);
+    let dispatch = useDispatch();
+    let action = cartAction;
+
+    function handleOnPlaceOrder()
+    {
+      toast.success("Order Place Successful");
+      dispatch(action.DeleteAllItems());
+    }
 
   return (
     <> 
@@ -24,12 +34,14 @@ export default function Cart() {
               <IoClose className="cross-icon" onClick={ () => setShowCart(false)} />
           </div>
 
-          <div className="side-cart" >
-              {items.map( (item) => <CartCard bill-type={item.id} name={item.name} image={item.image} price={item.price} qty={item.qty} id={item.id} key={item.id}/>)}
-          </div>
+          
 
-          {items.length>0 ? 
+          {items.length>0? 
           <>
+            <div className="side-cart" >
+                {items.map( (item) => <CartCard bill-type={item.id} name={item.name} image={item.image} price={item.price} qty={item.qty} id={item.id} key={item.id}/>)}
+            </div>
+
             <div className="bill" >
 
               <div className="bill-content" >
@@ -55,7 +67,7 @@ export default function Cart() {
             </div>
 
             <div className="placeorder-container">
-              <button className="placeorder-btn" >Place Order</button>
+              <button className="placeorder-btn" onClick={handleOnPlaceOrder} >Place Order</button>
             </div>
 
           </> : <div className="no-item"> No Item Added</div>}

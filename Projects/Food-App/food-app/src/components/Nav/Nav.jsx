@@ -27,7 +27,6 @@ export default function Nav() {
         <img src={food} className="food-icon" />
         <label className="app-name" >FOODY</label>
       </div>
-
       <form className="search-container" onSubmit={ (e) => e.preventDefault() } >
         <div className="search-icon-box">
           <IoSearch className="search-icon" />
